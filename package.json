@@ -1,0 +1,23 @@
+{
+  "name": "backend_coderhouse",
+  "version": "1.0.0",
+  "description": "curso",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stresha/Backend_coderHouse.git"
+  },
+  "author": "dabrowski yanina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stresha/Backend_coderHouse/issues"
+  },
+  "homepage": "https://github.com/stresha/Backend_coderHouse#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "moment": "^2.29.3"
+  }
+}
