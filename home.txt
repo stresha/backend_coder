@@ -1,6 +1,0 @@
-
-    {
-        "titulo" : "desafio 3 de coder house con servidor spress",
-        "link a productos:": "  http://localhost:8080/productos",
-        "link a producto random:": " http://localhost:8080/productosRandom"
-    }

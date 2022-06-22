@@ -1,7 +1,7 @@
 # Backend_coderHouse
 Proyecto realizar : ecommerce -
 
-github https://github.com/stresha/Backend_coderHouse
+github https://github.com/stresha/backend_coder
 
 Node https://nodejs.org/en/
 
