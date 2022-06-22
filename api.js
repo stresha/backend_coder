@@ -2,18 +2,18 @@ class api {
 
     productos = [];
     
- //    agregar un producto
+ //  agregar
     add(producto) {
          this.productos.push(producto);
       }
  
- // asignar una id a un producto.
+ // 
  
      getId() {
          return this.productos.length > 0 ? this.productos[this.productos.length - 1].id + 1 : 1;
      }
  
- // buscar en el array un producto por su id devolver error en caso que no exista.
+ // se ve producto 
      getById(id) {
          const producto = this.productos.find(producto => producto.id === id);
          if (!producto) {
@@ -22,11 +22,13 @@ class api {
          return producto;
      }
  
- // Obtener todos los productos
+ // retorna todo 
+
      getAll() {
          return this.productos;
      }
- // update de un producto segun su id
+ // actualiza 
+
      update(id, producto) {
          const index = this.productos.findIndex(producto => producto.id === id);
  
@@ -37,7 +39,7 @@ class api {
              this.productos[index].id = id;
      }
  
- // eliminar un producto del array segun su id
+ // borra
      delete(id) {
          if(!this.getById(id)){
              throw new Error('Producto no encontrado');
