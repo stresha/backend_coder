@@ -4,14 +4,9 @@ const app = express();
 const {Router} = express;
 const router = Router();
 
-
-
 //puerto 
 const PORT=8080;
 app.listen(PORT, () => {console.log(`Servidor corriendo en el puerto http://localhost:8080/${PORT}`)});
-
-
-
 
 //app
 app.use(express.static(__dirname + 'public'));
@@ -20,20 +15,18 @@ app.use(express.urlencoded({ extended: true}))
 app.use('/api/productos', router)
 app.on("error", () => {console.log("error del servidor")})
 
-
-
 let api= new API();
-
-
 
 // retorna todo
 router.get('/', (req, res) => {
       res.json(api.getAll());
    });
-// retorna por id 
+
+   // retorna por id 
 router.get('/:id', (req, res) => {
       res.json(api.getById(parseInt(req.params.id)));
    });
+ 
    // se ve y agrega
 router.post('/', (req, res) => {
       const producto ={
@@ -44,6 +37,7 @@ router.post('/', (req, res) => {
       api.add(producto);
       res.json(api.getAll());
    });
+  
    // se ve y actualiza
 router.put('/:id', (req, res) => {
    const producto ={
@@ -57,7 +51,7 @@ router.put('/:id', (req, res) => {
    
    //borra 
 
-   
+
 router.delete('/:id', (req, res) => {
       api.delete(parseInt(req.params.id));
       res.json(api.getAll());

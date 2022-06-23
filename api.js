@@ -7,10 +7,14 @@ class api {
          this.productos.push(producto);
       }
  
- // 
+ // por id 
  
      getId() {
-         return this.productos.length > 0 ? this.productos[this.productos.length - 1].id + 1 : 1;
+        let resultado = 1
+        if (this.productos.length > 0) {
+            resultado = this.productos[this.productos.length - 1].id + 1
+        } 
+        return resultado
      }
  
  // se ve producto 
@@ -30,9 +34,9 @@ class api {
  // actualiza 
 
      update(id, producto) {
-         const index = this.productos.findIndex(producto => producto.id === id);
+         const actualizar = this.productos.findIndex(producto => producto.id === id);
  
-         if(!index){
+         if(!actualizar){
              throw new Error('Producto no encontrado');
          }
              this.productos[index] = producto
