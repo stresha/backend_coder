@@ -19,5 +19,6 @@ archivo json  ---> "npm init",
 
 -express instalacion en npm "npm install express")
 
+-handlebars(motor de plantilla) (instalacionen npm "npm install express-handlebars")
 
 
