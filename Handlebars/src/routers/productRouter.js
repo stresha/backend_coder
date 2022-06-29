@@ -1,14 +1,14 @@
 import { Router } from "express";
-import { productNotFound } from "../consts/index.js";
-import { ContenedorMemoria } from "../api/Contenedor.js";
+import { itemNoDisp } from "../consts/index.js";
+import { datos } from "../api/Contenedor.js";
 
 const productRouter = Router();
-const ProductApi = new ContenedorMemoria();
+const datosProd = new datos();
 
 productRouter.get("/", (req, res) => {
-  const response = ProductApi.getAll();
+  const response = datosProd.getAll();
 
-  if (!response) res.send({ error: productNotFound });
+  if (!response) res.send({ error: itemNoDisp });
 
   res.render("productos", { productos: response });
 });
@@ -16,7 +16,7 @@ productRouter.get("/", (req, res) => {
 productRouter.post("/", (req, res) => {
   const { title, price, thumbnail } = req.body;
 
-  ProductApi.save({ title, price, thumbnail });
+  datosProd.save({ title, price, thumbnail });
 
   res.redirect("/");
 });

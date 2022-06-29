@@ -1,4 +1,5 @@
-const productNotFound = "Producto no disponible";
-const productWasDeleted = "Producto borrado";
+const itemNoDisp = "Producto no disponible";
+const ItemBorrado = "Producto borrado";
 
-export { productNotFound, productWasDeleted };
+export { itemNoDisp
+, ItemBorrado };

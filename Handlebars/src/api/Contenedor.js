@@ -1,7 +1,7 @@
 //los prod los meto en un array con constructor y uso eso simulando 
 
 
-class ContenedorMemoria {
+class datos {
     constructor(){
         this.elements = [
             {
@@ -40,16 +40,21 @@ class ContenedorMemoria {
         ]
     }
 
+    //todos
     getAll() {
         return this.elements;
     }
 
+
+    //id
     getById(id) {
         const element = this.elements.find((e)=> e.id == id);
 
         return element;
     }
 
+
+    //guardar
     save(element){
         element.id = this.elements.length === 0 ? 1 : this.elements[this.elements.length - 1].id + 1
 
@@ -58,6 +63,7 @@ class ContenedorMemoria {
         return element;
     }
 
+    //actualiza
     updateById (id,newData){
         const elementIndex = this.elements.findIndex((e)=> e.id ==id)
 
@@ -70,6 +76,8 @@ class ContenedorMemoria {
         return this.elements[elementIndex];
     }
 
+
+    //borra
     deleteById(id){
         const elementIndex = this.elements.findIndex((e)=> e.id ==id)
 
@@ -82,4 +90,4 @@ class ContenedorMemoria {
 
 }
 
-export {ContenedorMemoria};
+export {datos};
